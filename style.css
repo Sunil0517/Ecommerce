@@ -1,46 +1,44 @@
 /* nav bar */
 
-/* Base styles for the navigation bar */
+/* Style for the navbar */
 .navbar {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
+  background-color: #000;
+  color: #fff;
 }
 
 .navbar-brand {
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 24px;
 }
 
 /* Style for the search input and button */
 .form-control {
-  background-color: rgb(165, 163, 163); /* Make the input background transparent */
-  border: none; /* Remove border */
-  color: #fff; /* White text */
-  font-size: 16px; /* Adjust the font size as needed */
-  padding: 10px; /* Add padding to the input */
+  background-color: rgba(165, 163, 163, 0.7); /* Use rgba for transparency */
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
 }
 
 .btn-outline-success {
-  color: #fff; /* White text */
-  border-color: #fff; /* White border color */
+  color: #fff;
+  border-color: #fff;
 }
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
   .container-fluid {
-      display: flex; /* Make the container flex */
-      align-items: center; /* Align items vertically center */
-      justify-self: center;
+    display: block; /* Change display property to block for smaller screens */
   }
   .navbar-brand {
-      font-size: 20px; /* Reduce font size for smaller screens */
+    font-size: 20px;
   }
 
   .form-control {
-      width: 80%; /* Make the search input full-width on small screens */
-      margin-right: 0; /* Remove right margin */
+    width: 80%;
+    margin-right: 0;
   }
-
 }
+
 
 
 
