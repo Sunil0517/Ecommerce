@@ -111,6 +111,27 @@ let cardData = [
 
     }
     ,
+    {
+        image :"https://img3.wallspic.com/crops/9/8/0/6/2/126089/126089-clan_uchiha-kakashi_hatake-sharingan-illustration-animation-3840x2160.jpg",
+        title :'Itachi',
+        Anime :'Naruto',  
+        Price :'$ 10.00',
+    }
+    ,
+    {
+        image :"https://img3.wallspic.com/crops/7/4/8/8/6/168847/168847-anime-anime_girl-anime_art-cartoon-anime_friends_brazil-3840x2160.jpg",
+        title :'Suzume Iwato',
+        Anime :'Suzume',  
+        Price :'$ 10.00',
+    }
+    ,
+    {
+        image :"https://img1.wallspic.com/crops/6/5/2/9/1/119256/119256-woman_in_green_shirt_holding_green_textile-3840x2160.jpg",
+        title :'Erin Yager',
+        Anime :'Attack on titan',  
+        Price :'$ 10.00',
+    }
+    ,
 
 ]
 
@@ -154,6 +175,11 @@ function searchCards(query) {
     const filteredCards = cardData.filter((card) =>
         card.title.toLowerCase().includes(query.toLowerCase())||card.Anime.toLowerCase().includes(query.toLowerCase())
     );
+
+    if (filteredCards.length === 0) {
+        alert("No match found.");
+        return; 
+    }
 
     filteredCards.forEach((postData) => {
         const postElement = document.createElement('div');

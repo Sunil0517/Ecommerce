@@ -121,7 +121,7 @@
 }
 
 /* Add hover effect */
-.new-card:hover {
+.new-card:hover { 
   transform: scale(1.05); /* Increase the card size on hover */
   cursor: pointer;
 }
