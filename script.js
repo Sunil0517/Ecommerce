@@ -1,5 +1,5 @@
 //array of HTML strings with each string containing the HTML code of one card
-const cardData = [
+let cardData = [
     {
         image :'https://img2.wallspic.com/crops/4/7/7/4/6/164774/164774-tanjiro_kamado-demon_slayer_kimetsu_no_yaiba-anime-purple-art-3840x2160.jpg',
         title :'Tanjiro Kamado',
@@ -117,6 +117,13 @@ const cardData = [
 const postconatiner = document.querySelector('.container');
 
 const postmethods = () => {
+  
+    if(localStorage.getItem("newcardData")==null){
+        localStorage.setItem('newcardData',JSON.stringify(cardData));
+    }
+    else{
+        cardData=JSON.parse(localStorage.getItem('newcardData'));
+    }
     cardData.map((postData) => {
         const postElement = document.createElement('div'); 
         postElement.classList.add('new-card');
@@ -187,7 +194,7 @@ function addPoster() {
 
    
     cardData.push(newPoster);
-    localStorage.setItem('cardData', JSON.stringify(cardData));
+    localStorage.setItem('newcardData', JSON.stringify(cardData));
     postmethods();
 
  
