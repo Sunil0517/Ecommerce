@@ -111,6 +111,7 @@ const cardData = [
 
     }
     ,
+
 ]
 
 const postconatiner = document.querySelector('.container');
@@ -163,4 +164,35 @@ function searchCards(query) {
         `
         postconatiner.appendChild(postElement);
     });
+
+    document. getElementById("deals"). scrollIntoView();
+}
+
+
+
+
+
+function addPoster() {
+    const imageURL = document.getElementById('imageURL').value;
+    const title = document.getElementById('title').value;
+    const animeName = document.getElementById('animeName').value;
+    const price = document.getElementById('price').value;
+
+    const newPoster = {
+        image: imageURL,
+        title: title,
+        Anime: animeName,
+        Price: `$ ${price}.00`,
+    };
+
+   
+    cardData.push(newPoster);
+    localStorage.setItem('cardData', JSON.stringify(cardData));
+    postmethods();
+
+ 
+    document.getElementById('imageURL').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('animeName').value = '';
+    document.getElementById('price').value = '';
 }
